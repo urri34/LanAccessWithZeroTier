@@ -1,6 +1,7 @@
 # LanAccessWithZeroTier
-Access your LAN thru mobile phone/computer whatever you are using zero tier sofware defined nework in a LAN host.
 
+Access your LAN thru mobile phone/computer whatever you are using zero tier sofware defined nework in a LAN host.
+```
 /usr/bin/ip a
   enp0s3
   192.168.1.17/24
@@ -27,3 +28,6 @@ shutdown -r 0
 
 220MB RAM used
 0% CPU
+```
+Access your LAN thru mobile phone/computer whatever you are using zero tier sofware defined nework in a LAN docker.
+
