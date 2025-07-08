@@ -15,6 +15,9 @@ Authorize
 /usr/bin/ip a
   ztnfahsfg3
   172.29.239.10/16
+```
+![ManagedRoutes,jpg](ManagedRoutes,jpg.JPG)
+```
 /usr/bin/nano /etc/sysctl.conf
   net.ipv4.ip_forward=1
 /usr/bin/apt-get install iptables
