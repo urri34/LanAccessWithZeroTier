@@ -61,4 +61,11 @@ ln -s /etc/nginx/sites-available/LanAccessWithZeroTier /etc/nginx/sites-enabled/
 rm /etc/nginx/sites-enabled/default
 nginx -t
 systemctl reload nginx
+## CONSOLE
+mv update-issue-ip.sh /usr/local/bin/.
+chmod +x /usr/local/bin/update-issue-ip.sh
+systemctl daemon-reload
+systemctl enable update-issue
+systemctl start update-issue
+systemctl status update-issue
 ````
