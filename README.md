@@ -38,13 +38,29 @@ shutdown -r 0
 ## Web interface
 ```
 apt-get update
-apt-get install -y python3 python3-venv python3-pip
+apt-get install -y python3 python3-venv python3-pip git
 mkdir /var/www
 cd /var/www
 python3 -m venv venv
 source venv/bin/activate
 pip install Flask gunicorn nginx
+git clone https://github.com/urri34/LanAccessWithZeroTier.git
+mv LanAccessWithZeroTier/app.py .
+mkdir templates
+mv LanAccessWithZeroTier/index.html templates/.
+##GUNICORN
+/etc/systemd/system/flaskapp.service
+systemctl daemon-reexec
+systemctl daemon-reload
+systemctl enable flaskapp
+systemctl start flaskapp
+systemctl status flaskapp
+## NGINX
+mv LanAccessWithZeroTier/LanAccessWithZeroTier /etc/nginx/sites-enabled/.
+ln -s /etc/nginx/sites-available/LanAccessWithZeroTier /etc/nginx/sites-enabled/LanAccessWithZeroTier
 rm /etc/nginx/sites-enabled/default
+nginx -t
+systemctl reload nginx
 
 ````
 
