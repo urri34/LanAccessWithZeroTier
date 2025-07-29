@@ -49,7 +49,7 @@ mv LanAccessWithZeroTier/app.py .
 mkdir templates
 mv LanAccessWithZeroTier/index.html templates/.
 ##GUNICORN
-/etc/systemd/system/flaskapp.service
+mv LanAccessWithZeroTier/flaskapp.service /etc/systemd/system/.
 systemctl daemon-reexec
 systemctl daemon-reload
 systemctl enable flaskapp
@@ -61,8 +61,4 @@ ln -s /etc/nginx/sites-available/LanAccessWithZeroTier /etc/nginx/sites-enabled/
 rm /etc/nginx/sites-enabled/default
 nginx -t
 systemctl reload nginx
-
 ````
-
-/etc/nginx/sites-available/LanAccessWithZeroTier
-
