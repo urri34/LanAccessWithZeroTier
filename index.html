@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Execució de Comandes</title>
+</head>
+<body>
+    <h1>Tria una acció</h1>
+    <form action="/run" method="post">
+        <select name="command">
+            <option value="list">Llistar arxius</option>
+            <option value="disk">Estat del disc</option>
+            <option value="restart_service">Reiniciar Apache</option>
+        </select>
+        <button type="submit">Executar</button>
+    </form>
+</body>
+</html>
